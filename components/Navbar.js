@@ -6,6 +6,7 @@ import TwiterLogo from "../public/twitter.png";
 import FacebookLogo from "../public/facebook.png";
 import InstagramLogo from "../public/instagram.png";
 import Image from "next/image";
+import Link from 'next/link';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,49 +31,53 @@ function Navbar() {
     shadow-lg
     navbar navbar-expand-lg navbar-light">
             <div className="">
-                <div className="flex items-center px-8 py-4 justify-between w-full flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div className="flex px-8 items-center justify-between w-full">
+                <div className="flex items-center px-20  py-4 justify-between w-full flex-grow lg:flex lg:items-center lg:w-auto">
+                    <div className="flex px-8 items-center justify-between w-full ">
                         <div className="text-sm lg:flex-grow">
-                            <a href="/">
-                            <Image src={localLogo}
+                            <Link href="/">
+                            <Image className="cursor-pointer" src={localLogo}
                             width="146.8"
                             height="41.8"
                             alt="logo" />
 
-                            </a>
+                            </Link >
 
                         </div>
-                        <div className=" space-x-8 mx-auto md:block float-right">
-                            <div className="hidden  space-x-8 md:flex lg:flex space-between">
-                            <a href="/">
-                            <Image src={HomeLogo}
+                        <div className=" space-x-8 mx-auto  float-right hidden  md:flex lg:flex space-between">
+                            <div className="px-4">
+                            <Link  href="/">
+                            <Image className="cursor-pointer my-3" src={HomeLogo}
                             width="40"
                             height="40"
-                            alt="Picture of the author" />
+                            alt="Home logo" />
+                            </Link >
+                            </div> 
 
-                            </a>
-                                <a href="/">
-                            <Image src={TwiterLogo}
+                            <div className="px-4">
+                                <Link  href="/">
+                            <Image className="cursor-pointer" src={TwiterLogo}
                             width="40"
                             height="40"
-                            alt="Picture of the author" />
+                            alt="twitter" />
+                            </Link >
+                            </div>
 
-                            </a>
-                            <a href="/">
-                            <Image src={FacebookLogo}
+                            <div className="px-4">
+                            <Link  href="/">
+                            <Image className="cursor-pointer" src={FacebookLogo}
                             width="40"
                             height="40"
-                            alt="Picture of the author" />
+                            alt="facebook" />
+                            </Link >
+                            </div>
 
-                            </a>
-                            <a href="/">
-                            <Image src={InstagramLogo}
+                            <div className="px-4">
+                            <Link  href="/">
+                            <Image className="cursor-pointer" src={InstagramLogo}
                             width="40"
                             height="40"
-                            alt="Picture of the author" />
-
-                            </a>
-
+                            alt="instagram" />
+                            </Link >
                             </div>
 
                         </div>
@@ -138,43 +143,41 @@ function Navbar() {
                 {(ref) => (
                     <div className="md:hidden flex items-center id=mobile-menu">
                         <div ref={ref} className="flex sm:px-3 space-x-8 mx-auto md:block float-right">
-                        <a href="/">
-                            <Image src={HomeLogo}
-                           width="100"
-                           height="100"
-                            alt="Picture of the author" />
+                        <div className="px-4">
+                            <Link  href="/">
+                            <Image className="cursor-pointer my-3" src={HomeLogo}
+                           width="60"
+                           height="60"
+                            alt="Home logo" />
+                            </Link >
+                            </div> 
 
-                            </a>
-                            <a href="/" 
-                            activeclass="twitter"
-                            to="home" smooth={true} offset={50} duration={500} 
-                            className="mt-1 block px-2 py-1">
-                            <Image src={TwiterLogo}
-                            width="100"
-                            height="100"
-                            alt="Picture of the author" />
+                            <div className="px-4">
+                                <Link  href="/">
+                            <Image className="cursor-pointer" src={TwiterLogo}
+                           width="60"
+                           height="60"
+                            alt="twitter" />
+                            </Link >
+                            </div>
 
-                            </a>
-                            <a href="/" 
-                            activeclass="facebook"
-                            to="home" smooth={true} offset={50} duration={500} 
-                            className="mt-1 block px-2 py-1">
-                            <Image src={FacebookLogo}
-                            width="100"
-                            height="100"
-                            alt="Picture of the author" />
+                            <div className="px-4">
+                            <Link  href="/">
+                            <Image className="cursor-pointer" src={FacebookLogo}
+                            width="60"
+                            height="60"
+                            alt="facebook" />
+                            </Link >
+                            </div>
 
-                            </a>
-                            <a href="/" 
-                            activeclass="instagram"
-                            to="home" smooth={true} offset={50} duration={500} 
-                            className="mt-1 block px-2 py-1">
-                            <Image src={InstagramLogo}
-                             width="100"
-                             height="100"
-                            alt="Picture of the author" />
-
-                            </a>
+                            <div className="px-4">
+                            <Link  href="/">
+                            <Image className="cursor-pointer" src={InstagramLogo}
+                            width="60"
+                            height="60"
+                            alt="instagram" />
+                            </Link >
+                            </div>
                             </div>
 
                     </div>

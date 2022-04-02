@@ -5,7 +5,7 @@ import { getFirstPosts, getCategories } from '../lib/data';
 import { api_endpoint } from '../constants/index';
 import { useState } from 'react';
 import useSWR from 'swr';
-
+import Image from 'next/image';
 
 
 const fetchData = (endpoint, query, variables) =>
@@ -102,8 +102,13 @@ return <div className="">
 {posts.map((items) => (
     <Link key={items.slug} href={`/posts/${items.slug}`} passHref>
      <div className="border rounded-lg bg-white group cursor-pointer overflow-hidden" >
-      <img className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
-      src={items.featuredImage.url} alt={`${items.title} Cover Image`}/>
+      <Image 
+      className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+      src={items.featuredImage.url} width={800}
+      height={450}
+      layout="responsive"
+       alt={`${items.title} 
+       Cover Image`}/>
    <div className="px-6 py-4">
        <div className="font-bold text-xl mb-2 text-gray text-justify"> 
      <h2 className="text-justify text-gray-700 text-2xl">{items.title}</h2> 
@@ -134,7 +139,7 @@ return <div className="">
  
 
   
-<div className="flex flex-col items-center justify-center bg-gray-200 min-h-screen py-2  mx-auto px-10 ">
+<div className="flex flex-col items-center justify-center bg-gray-200 min-h-screen py-2  mx-auto px-10 mb-1 ">
 <div className="grid grid-cols-1 container sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 p-2 md:p-6 border-gray-100 rounded overflow-hidden shadow-lg">
 {data?.postsConnection?.edges.map((post) => (
     <Link key={post.node.slug} href={`/posts/${post.node.slug}`} passHref>
