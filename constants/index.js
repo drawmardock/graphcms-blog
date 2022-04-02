@@ -1,0 +1,1 @@
+export const api_endpoint = 'https://api-us-east-1.graphcms.com/v2/ckz5sv3931odh01z89jmkhjyk/master';
