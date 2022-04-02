@@ -1,26 +1,3 @@
-import { getFooterAbout } from "../lib/data";
-
-
-export async function getStaticProps() {
-  
-
-  const { infos } = await getFooterAbout();
-
-
- 
-
-  
-
-
-  return {
-    props: {
-     infos,
-    },
-  };
-}
-
-
-
 function Footer() {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-800 mx-auto px-10 py-6">
