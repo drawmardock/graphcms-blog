@@ -34,7 +34,7 @@ export default function PostsSlug({ post, categoriesConnection, postsConnection 
 
 <div className="container mx-auto py-4 px-10 mb-8">
         <div className="grid grid-cols-1  lg:grid-cols-8 gap-10">
-          <div className="col-span-1 md:col-span-4 lg:col-span-6 py-8">
+          <div className="col-span-2 md:col-span-4 lg:col-span-6 py-8">
           <h1 className="font-bold tracking-wide text-gray-700 text-center text-6xl mx-6" >{post.title}</h1>
           <p className="font-bold tracking-wide text-gray-500 text-base text-justify py-6" >{post.excerpt}</p>
           <h2 className="font-bold tracking-wide text-gray-500 text-justify text-xl " >{post.createdAt}</h2>
