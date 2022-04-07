@@ -90,7 +90,7 @@ function Navbar() {
 								className=""
 								aria-controls="mobile-menu"
 								aria-expanded="false"
-							>
+							> 
 								<span className="sr-only">Open main menu</span>
 								{!isOpen ? (
 									<svg
@@ -141,7 +141,7 @@ function Navbar() {
             leaveTo="opacity-0 scale-95"
             >
                 {(ref) => (
-                    <div className="md:hidden flex items-center id=mobile-menu float-right">
+                    <div className="md:hidden  flex items-center id=mobile-menu ">
                         <div ref={ref} className="flex sm:px-3 space-x-8 mx-auto md:block float-right">
                         <div className="px-4">
                             <Link  href="/">

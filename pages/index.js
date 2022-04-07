@@ -120,7 +120,7 @@ return <div className="">
   ))}
   </div>
   <div className="bg-gray-200 border rounded-lg col-span-2 md:col-span-4 lg:col-span-2">
-            <div className="border rounded-lg relative sm:sticky lg:sticky top-2">
+            <div className="border rounded-lg relative  lg:sticky top-2">
     {categoriesConnection?.edges.map((type) => (
         <Link key={type.node.slug} href={`/posts/category/${type.node.slug}`} passHref>
          <div className="lg:sticky group overflow-hidden relative top-2" >
