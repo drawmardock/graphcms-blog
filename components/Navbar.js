@@ -31,8 +31,8 @@ function Navbar() {
     shadow-lg
     navbar navbar-expand-lg navbar-light">
             <div className="">
-                <div className="flex items-center px-20  py-4 justify-between w-full flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div className="flex px-8 items-center justify-between w-full ">
+                <div className="flex items-center sm:px-5 md:px-20 py-4 lg:px-20 justify-between w-full flex-grow lg:flex lg:items-center lg:w-auto">
+                    <div className="flex  items-center justify-between w-full ">
                         <div className="text-sm lg:flex-grow">
                             <Link href="/">
                             <Image className="cursor-pointer" src={localLogo}
@@ -141,7 +141,7 @@ function Navbar() {
             leaveTo="opacity-0 scale-95"
             >
                 {(ref) => (
-                    <div className="md:hidden flex items-center id=mobile-menu">
+                    <div className="md:hidden flex items-center id=mobile-menu float-right">
                         <div ref={ref} className="flex sm:px-3 space-x-8 mx-auto md:block float-right">
                         <div className="px-4">
                             <Link  href="/">
